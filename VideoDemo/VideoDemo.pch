@@ -1,0 +1,24 @@
+//
+//  VideoDemo.pch
+//  VideoDemo
+//
+//  Created by Qson on 2018/12/10.
+//  Copyright © 2018 Qson. All rights reserved.
+//
+
+#ifndef VideoDemo_pch
+#define VideoDemo_pch
+
+#ifdef __OBJC__
+#import "UIView+TP_Frame.h"
+#endif
+
+#define kIsIpad ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+#define kIPadSuitFloat(value) (kIsIpad ? (value) * 1.3 : (value))
+// iphoneX适配用
+#define IS_IPHONE_X (fabs((double)[[UIScreen mainScreen] bounds].size.height - (double)812)<DBL_EPSILON)
+
+#define ScreenWidth     ([UIScreen mainScreen].bounds.size.width)
+#define ScreenHeight     ([UIScreen mainScreen].bounds.size.height)
+
+#endif /* VideoDemo_pch */
